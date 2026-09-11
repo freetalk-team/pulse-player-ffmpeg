@@ -1,0 +1,75 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "linux-x64-release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/linux-x64-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_PACKAGE": "TRUE"
+      }
+    },
+    {
+      "name": "linux-arm64-release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/linux-arm64-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_PACKAGE": "TRUE"
+      }
+    },
+    {
+      "name": "linux-cross-arm64-release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/linux-arm64-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_PACKAGE": "TRUE",
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/linux-arm64.cmake"
+      }
+    },
+    {
+      "name": "win-x64-release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/win-x64-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_PACKAGE": "TRUE",
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/windows-mingw-x64.cmake"
+      }
+    },
+    {
+      "name": "win-arm64-release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/win-arm64-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_PACKAGE": "TRUE",
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchains/windows-mingw-aarch64.cmake"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "linux-x64-release",
+      "configurePreset": "linux-x64-release"
+    },
+    {
+      "name": "linux-arm64-release",
+      "configurePreset": "linux-arm64-release"
+    },
+    {
+      "name": "linux-cross-arm64-release",
+      "configurePreset": "linux-cross-arm64-release"
+    },
+    {
+      "name": "win-x64-release",
+      "configurePreset": "win-x64-release"
+    },
+    {
+      "name": "win-arm64-release",
+      "configurePreset": "win-arm64-release"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "pulse-player-ffmpeg-workspace",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "configure": "cmake -S native -B build",
+    "build": "cmake --build build --parallel",
+    "clean": "rm -rf build",
+
+    "pack": "npm pack --workspaces --pack-destination ./dist",
+    "pack:dry": "npm pack --workspaces --dry-run",
+
+    "publish:packages": "npm publish --workspaces --access public"
+  },
+  "devDependencies": {
+    "node-addon-api": "^8.9.0"
+  }
+}

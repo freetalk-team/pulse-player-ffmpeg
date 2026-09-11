@@ -1,0 +1,16 @@
+{
+  "name": "@freetalk-team/pulse-player-ffmpeg-linux-arm64",
+  "version": "1.0.0",
+  "description": "Linux arm64 native binary for Pulse Player FFmpeg",
+  "license": "MIT",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "ffmpeg.node",
+  "files": [
+    "ffmpeg.node"
+  ]
+}

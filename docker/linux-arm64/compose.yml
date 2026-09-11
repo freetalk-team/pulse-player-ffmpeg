@@ -1,0 +1,13 @@
+services:
+  linux-arm64:
+    build:
+      context: .
+      platforms:
+        - linux/arm64
+    platform: linux/arm64
+    image: debian-dev-arm64:latest
+    volumes:
+      - ../..:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true

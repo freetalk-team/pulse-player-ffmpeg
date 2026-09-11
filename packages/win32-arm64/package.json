@@ -1,0 +1,16 @@
+{
+  "name": "@freetalk-team/pulse-player-ffmpeg-win32-arm64",
+  "version": "1.0.0",
+  "description": "Windows arm64 native binary for Pulse Player FFmpeg",
+  "license": "MIT",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "ffmpeg.node",
+  "files": [
+    "ffmpeg.node"
+  ]
+}

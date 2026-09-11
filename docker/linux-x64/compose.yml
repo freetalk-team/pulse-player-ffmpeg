@@ -1,0 +1,10 @@
+services:
+  linux-x64:
+    build:
+      context: .
+    image: debian-dev-x64:latest
+    volumes:
+      - ../..:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true

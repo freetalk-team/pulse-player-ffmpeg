@@ -1,0 +1,22 @@
+services:
+  win-x64:
+    build:
+      context: .
+      dockerfile: Dockerfile.llvm
+    volumes:
+      - .:/workspace
+    image: ubuntu-dev-mingw-llvm:latest
+    stdin_open: true
+    tty: true
+    working_dir: /workspace
+  win-x64-builder:
+    build:
+      context: .
+    image: ubuntu-dev-win-x64:latest
+    volumes:
+      - ../..:/workspace
+      - ../../native/cmake/toolchains/windows-mingw-x64.cmake:/usr/share/cmake/toolchains/win.toolchain.cmake
+      - ./libnode-delay.a:/usr/local/lib/libnode-delay.a
+    working_dir: /workspace
+    stdin_open: true
+    tty: true

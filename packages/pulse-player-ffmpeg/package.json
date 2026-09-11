@@ -1,0 +1,26 @@
+{
+  "name": "@freetalk-team/pulse-player-ffmpeg",
+  "version": "1.0.0",
+  "description": "Native FFmpeg bindings for Node.js and Electron",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/freetalk-team"
+  },
+  "files": [
+    "index.js",
+    "loader.js",
+    "index.d.ts",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "optionalDependencies": {
+    "@freetalk-team/pulse-player-ffmpeg-linux-x64": "1.0.0",
+    "@freetalk-team/pulse-player-ffmpeg-linux-arm64": "1.0.0",
+    "@freetalk-team/pulse-player-ffmpeg-win32-x64": "1.0.0",
+    "@freetalk-team/pulse-player-ffmpeg-win32-arm64": "1.0.0"
+  }
+}
