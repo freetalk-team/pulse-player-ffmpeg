@@ -9,11 +9,27 @@
     "type": "github",
     "url": "https://github.com/sponsors/freetalk-team"
   },
+  "author": {
+    "name": "Freetalk Team",
+    "email": "team.freetalk@gmail.com",
+    "url": "https://www.sipme.io"
+  },
+  "contributors": [
+    {
+      "name": "Pavel Patarinski",
+      "email": "pavelp.work@gmail.com",
+      "url": "https://www.sipme.io/cv/pavel.patarinski"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freetalk-team/pulse-player-ffmpeg.git"
+  },
+  "homepage": "https://www.sipme.io",
   "files": [
     "index.js",
     "loader.js",
     "index.d.ts",
-    "examples/",
     "README.md",
     "LICENSE"
   ],
