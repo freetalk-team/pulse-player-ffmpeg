@@ -1,6 +1,8 @@
+/// <reference types="node" />
+
 export interface CoverImage {
     mime?: string;
-    data?: object;
+    data?: Buffer;
 }
 
 export interface Metadata {
@@ -10,7 +12,7 @@ export interface Metadata {
     genre?: string | string[];
     year?: string;
     track_no?: string;
-    cover?: string | CoverImage;
+    cover?: string | CoverImage | Buffer;
 }
 
 export interface MediaInfo {

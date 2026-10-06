@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Linux arm64 native binary for Pulse Player FFmpeg",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freetalk-team/pulse-player-ffmpeg.git"
+  },
+  "homepage": "https://github.com/freetalk-team/pulse-player-ffmpeg",
   "os": [
     "linux"
   ],

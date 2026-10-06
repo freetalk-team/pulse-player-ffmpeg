@@ -16,14 +16,5 @@ if (!arches || !arches.includes(process.arch)) {
 const pkg =
     `@freetalk-team/pulse-player-ffmpeg-${process.platform}-${process.arch}`;
 
-try {
-    module.exports = require(pkg);
-} catch (err) {
-    if (err.code === 'MODULE_NOT_FOUND') {
-        throw new Error(
-            `Native binary package '${pkg}' is not installed.`
-        );
-    }
+module.exports = require(pkg);
 
-    throw err;
-}

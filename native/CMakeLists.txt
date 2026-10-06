@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD 17)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
 option (BUILD_TESTS "Build tests" OFF)
+option (USE_STATIC_SYSTEM_LIBS "Link system libraries statically" TRUE)
 
 # find_package(NodeJS REQUIRED)
 # find_package(ZLIB REQUIRED)
@@ -80,13 +81,14 @@ if (MINGW)
 	)
 else ()
 
-	set(ZLIB_USE_STATIC_LIBS TRUE)
+	if (USE_STATIC_SYSTEM_LIBS)
+		set(ZLIB_USE_STATIC_LIBS TRUE)
+		set(OPENSSL_USE_STATIC_LIBS TRUE)
+		set(ZSTD_USE_STATIC_LIBS TRUE)
+	endif ()
+
 	find_package(ZLIB REQUIRED)
-
-	set(OPENSSL_USE_STATIC_LIBS TRUE)
 	find_package(OpenSSL REQUIRED)
-
-	set(ZSTD_USE_STATIC_LIBS TRUE)
 	find_package(ZSTD REQUIRED)
 
 endif ()

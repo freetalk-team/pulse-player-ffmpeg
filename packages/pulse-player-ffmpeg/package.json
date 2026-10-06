@@ -4,6 +4,13 @@
   "description": "Native FFmpeg bindings for Node.js and Electron",
   "main": "index.js",
   "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./index.js",
+      "default": "./index.js"
+    }
+  },
   "license": "MIT",
   "funding": {
     "type": "github",
@@ -25,7 +32,7 @@
     "type": "git",
     "url": "git+https://github.com/freetalk-team/pulse-player-ffmpeg.git"
   },
-  "homepage": "https://www.sipme.io",
+  "homepage": "https://github.com/freetalk-team/pulse-player-ffmpeg",
   "files": [
     "index.js",
     "loader.js",
